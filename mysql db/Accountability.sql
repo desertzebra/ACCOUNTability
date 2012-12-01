@@ -22,7 +22,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Entity`
+-- Table structure for table `meta`
 --
 
 CREATE TABLE `Entity` (
@@ -40,7 +40,7 @@ CREATE TABLE `Entity` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Testimonial`
+-- Table structure for table `testimonial`
 --
 
 CREATE TABLE `Testimonial` (
@@ -58,7 +58,7 @@ CREATE TABLE `Testimonial` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Transaction`
+-- Table structure for table `data`
 --
 
 CREATE TABLE `Transaction` (
