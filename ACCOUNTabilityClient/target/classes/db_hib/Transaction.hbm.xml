@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2012 3:05:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="db_hib.Transaction" table="transaction" catalog="accountability">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="from" type="long">
+            <column name="from" not-null="true" />
+        </property>
+        <property name="to" type="long">
+            <column name="to" not-null="true" />
+        </property>
+        <property name="amount" type="float">
+            <column name="amount" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="testimonialId" type="long">
+            <column name="testimonial_id" not-null="true" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="Date" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
