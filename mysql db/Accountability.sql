@@ -25,7 +25,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `meta`
 --
 
-CREATE TABLE `Entity` (
+CREATE TABLE `Meta` (
   `id` bigint(20) NOT NULL DEFAULT '0',
   `name` varchar(30) DEFAULT 'anonymous',
   `score` bigint(2) NOT NULL,
@@ -61,10 +61,10 @@ CREATE TABLE `Testimonial` (
 -- Table structure for table `data`
 --
 
-CREATE TABLE `Transaction` (
+CREATE TABLE `Data` (
   `id` bigint(20) NOT NULL DEFAULT '0',
-  `from` bigint(20) NOT NULL,
-  `to` bigint(20) NOT NULL,
+  `Donor` bigint(20) NOT NULL,
+  `Recv` bigint(20) NOT NULL,
   `amount` float NOT NULL,
   `testimonial_id` bigint(20) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
