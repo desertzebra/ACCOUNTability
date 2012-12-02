@@ -1,8 +1,6 @@
 
 
-import java.util.Calendar;
-import java.util.Date;
-import org.hibernate.Session;
+import db_hib.DB_Manager;
 
 /**
  * @author desertzebra
@@ -10,29 +8,13 @@ import org.hibernate.Session;
  */
 public class client {
 
-	/**
-	 * @param args
-	 */
-	public int addTransaction(long donor_id, long rec_id, float amount){
-		
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		session.beginTransaction();
-		Entity donor_chk = new Entity();
-		Entity rec_chk = new Entity();
-        Transaction tran_cl = new Transaction();
-        
-        tran_cl.setFrom(donor_id);
-        tran_cl.setFrom(rec_id);
-        tran_cl.setAmount(amount);
-        tran_cl.setDate(Calendar.getInstance().getTime());
-        session.save(tran_cl);
-        session.getTransaction().commit();
-		return 1;
-	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		public static void main(String[] args) {
 		System.out.println("Maven + Hibernate + MySQL");
-        	
+		DB_Manager data = new DB_Manager();
+		int result = data.addTransaction(1,1,1000);
+		
+		
+		System.out.println(result);	
 	}
 
 }
